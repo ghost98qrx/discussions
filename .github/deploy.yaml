@@ -7,6 +7,8 @@ jobs:
   deployment-jobs:
     runs-on: ubuntu-latest
     steps:
+      - name: say hello
+        run: echo "hello"
       - name: checkout of repo
         uses: actions/checkout@v6
 
