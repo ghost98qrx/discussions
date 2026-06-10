@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: build the docker image
-        run: sudo docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/discussions:latest .
+        run: sudo docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/discussions2:latest .
 
       - name: login to Docker hub 
         run: sudo docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }} 
