@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: say hello
-        run: echo "hellos"
+        run: echo "hello sir"
+  
       - name: checkout of repo
         uses: actions/checkout@v6
 
@@ -19,4 +20,4 @@ jobs:
         run: sudo docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }} 
 
       - name: push the docker image
-        run: sudo docker push   ${{ secrets.DOCKERHUB_USERNAME }}/discussions:latest   
+       
