@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: say hello
-        run: echo "hello sir"
+        run: echo "hello sirs"
   
       - name: checkout of repo
         uses: actions/checkout@v6
