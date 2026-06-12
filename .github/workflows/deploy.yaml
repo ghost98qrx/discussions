@@ -5,7 +5,7 @@ on:
     - deploy
 jobs:
   deployment-jobs:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: say hello
         run: echo "hello ma"
@@ -20,4 +20,4 @@ jobs:
         run: sudo docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }} 
 
       - name: push the docker image
-        run: sudo docker push ${{ secrets.DOCKERHUB_USERNAME }}/discussions4:latest 
+        run: sudo docker push ${{ secrets.DOCKERHUB_USERNAME }}/discussions4:latest
